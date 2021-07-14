@@ -1,7 +1,8 @@
 body{
-    background-color: azure;
+    background-color: white;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 header{
     margin: 0px;
@@ -15,12 +16,10 @@ nav{
     padding-top: 42px;
     padding-left: 156px;
     padding-right: 124px;
-    width: 1160px;
+    width: 1250px;
     height: 44px;
     align-items: center;
 }
-
-
 nav ul{
     list-style: none;
     float: right;
@@ -33,46 +32,133 @@ nav ul li{
     padding-bottom: 10px;
     padding-right: 0px;
     padding-left: 36px;
+    font-size: 16px;
 }
 a{
+    text-decoration: none;
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    color: white;
 }
+nav ul li a{
+  color: white;
+}
+a:hover{
+  background: #c90032;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+@media (max-width: 992px){
+    nav ul li a{
+    font-size: 16px;
+  }
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover{
+    background: none;
+    color: #002b4d;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+
 .login{
-    margin-left: 450px;
+    margin-left: 400px;
     text-align: center;
     padding: 10px;
-    width: 123px;
-    height: 44px; 
+    width: 123px; 
     background-color: #E02C6D;
     color: white;
     border: 0;
-
 }
-
+header h1{
+    color: white;
+}
+.copa-america{
+    display: flex;
+    flex-direction: row;
+    padding-left: 156px;
+    padding-right: 124px;
+    width: 1250px;
+}
+.h-half{
+    padding-left: 40px;
+    padding-top: 150px;
+    width: 50%;
+    margin: 0 auto;
+}
+.h-half h1{
+    font-size: 64px;
+    line-height: 80px;
+}
+.slider{
+    transition: 5s linear;
+    width: 50%;
+    padding-top: 150px;
+}
+.slider img{
+    display: flex;
+    width: 550px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 40px;
+    align-items: center;
+}
+.slider:hover{
+    transform: rotate(360deg) scale(1.2);
+}
 section{
     width: 70%;
     margin-top: 70px;
     margin-left: 195px;
     margin-right: 195px;
+    margin-bottom: 0;
     padding: 0;
 }
-
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 30px;
 }
-
 .player{
     display: flex;
     flex-direction: column;
     height: 474px;
     width: 330px;
-    background-color: white;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     align-items: center;
     padding-top: 15px;
@@ -83,48 +169,49 @@ section{
     color: #18191F;
 }
 .player p{
-    margin-top: 10px;
     margin-bottom: 15px;
     padding: 0;
     color:#6C6C6C;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.4;
 }
 .player img{
     width:300px;
     height: 256px;
 }
-
 .profile{
     padding: 15px;
 }
 .highlights{
     display: flex;
-    height: 567px;
     margin-top: 165px;
     margin-left: 195px;
     margin-right: 195px;
-    width: 70%;
+    width: 1060px;
 }
-
+.half{
+    margin: 0;
+    width: 50%;
+    float: left;
+    padding-right: 40px;
+}
 h1{
     font-size: 48px;
     color: #18191F;
+    line-height: 1.2;
+    font-size: 45px;
     font-weight: 700;
 }
-
-.half{
-    margin: 0;
-    padding-right: 50px;
-    width: 50%;
-    float: left;
-}
 .half-p{
+    margin: 0;
+    padding: 0;
     color:#6C6C6C;
+    line-height: 1.2;
 }
 .half img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
+    padding: 0;
 }
 .watch{
     text-align: center;
@@ -134,4 +221,100 @@ h1{
     background-color: #E02C6D;
     color: white;
     border: 0;
+}
+.gallery{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    width: 1060px;
+    margin-top: 165px;
+    margin-left: 195px;
+    margin-right: 195px;
+    margin-bottom: 0;
+    padding: 0;
+    height: 635px;
+}
+.gallery h1{
+    margin: auto;
+    padding: 5px;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+}
+.top img{
+    margin: 5px;
+    height: 100%;
+    width: 33.333%;
+
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.bottom img{
+    margin: 5px;
+    height: 100%;
+    width: 20%;
+}
+.gallery img:hover{
+    transform: scale(2);
+}
+.sponsor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.sponsor h2{
+    color: #18191F;
+    font-size: 30px;
+}
+.sponsor img{
+    padding: 0px 20px;
+}
+hr{
+    color: darkblue;
+    border: 2px solid darkblue;
+    margin-top: 60px;
+}
+footer{
+    background-color:white;    
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+}
+footer img{
+    height: 110px;
+    width: 485px;
+}
+footer i{
+    margin: 5px;
+    padding: 10px;
+    font-size: 32px;
+    color: #6C6C6C;
+}
+footer p{
+    margin: 0;
+    color: #2b2a2a;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+@media only screen and (max-width:688px){
+
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .top img{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
