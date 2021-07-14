@@ -221,6 +221,7 @@ h1{
     color: white;
     border: 0;
 }
+
 iframe{
     margin-top: 60px;
     margin-left: 30%;
@@ -270,6 +271,7 @@ iframe{
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+    padding-top: 30px; 
 }
 .sponsors h2{
     color: #18191F;
